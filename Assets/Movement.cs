@@ -1,13 +1,12 @@
 using UnityEngine;
 using System.Collections;
 
-public class Translate : MonoBehaviour
+public class Movement : MonoBehaviour
 {
     public float moveSpeed = 20f;
     public float turnSpeed = 50f;
     
-    
-    void Update ()
+    void Update()
     {
         if(Input.GetKey(KeyCode.UpArrow))
             transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
@@ -21,4 +20,5 @@ public class Translate : MonoBehaviour
         if(Input.GetKey(KeyCode.RightArrow))
             transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime);
     }
+
 }
